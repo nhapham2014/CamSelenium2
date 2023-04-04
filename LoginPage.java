@@ -44,25 +44,15 @@ public class LoginPage extends PageObjectPage {
 
     public boolean checkExisterrorEmail() {
         if (driver.findElements(lcEmailError).size() > 0) {
-            if (driver.findElement(lcEmailError).isDisplayed())
-                return true;
-            else
-                return false;
-        } else {
-            return false;
+            return true;
         }
-
+        return false;
     }
 
     public boolean checkExisterrorPass() {
         if (driver.findElements(lcPassError).size() > 0) {
-            if (driver.findElement(lcPassError).isDisplayed())
-                return true;
-            else
-                return false;
-        } else {
-            return false;
+            return true;
         }
-
+        return false;
     }
 }
